@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:kostin/app/routes/app_pages.dart';
-//import 'package:progress_dialog/progress_dialog.dart';
+import 'package:progress_dialog/progress_dialog.dart';
 import 'package:sp_util/sp_util.dart';
 import '../controllers/loginpage_controller.dart';
 
@@ -220,9 +220,9 @@ class _LoginpageViewState extends State<LoginpageView> {
           .show();
       return;
     }
-    // ProgressDialog progressDialog = ProgressDialog(context);
-    // progressDialog.style(message: "loading..");
-    // progressDialog.show();
+    ProgressDialog progressDialog = ProgressDialog(context);
+    progressDialog.style(message: "loading..");
+    progressDialog.show();
     final response = await http
         .post(Uri.parse('http://localhost/kostin/public/api/login'), body: {
       'email': emailController.text,
@@ -232,8 +232,8 @@ class _LoginpageViewState extends State<LoginpageView> {
     });
     // progressDialog.hide();
     if (response.statusCode == 200) {
-      // SpUtil.putBool("isLogin", true);
-      // SpUtil.putString("email", emailController.text);
+      SpUtil.putBool("isLogin", true);
+      SpUtil.putString("email", emailController.text);
       Get.offAndToNamed(Routes.HOME_INTI);
     } else {
       AwesomeDialog(

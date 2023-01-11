@@ -147,7 +147,7 @@ class _BestofferState extends State<Bestoffer> {
                                                 Text(
                                                   "Rp. 350000",
                                                   style: GoogleFonts.montserrat(
-                                                    fontSize: 15,
+                                                    fontSize: 13,
                                                     fontWeight: FontWeight.bold,
                                                   ),
                                                 ),
@@ -161,18 +161,18 @@ class _BestofferState extends State<Bestoffer> {
                                                       ),
                                                     ),
                                                     SizedBox(
-                                                      width: 2,
+                                                      width: 0,
                                                     ),
                                                     Text(
                                                       "0",
                                                       textAlign: TextAlign.left,
                                                       style: GoogleFonts
                                                           .montserrat(
-                                                        fontSize: 14,
+                                                        fontSize: 9,
                                                       ),
                                                     ),
                                                     SizedBox(
-                                                      width: 2,
+                                                      width: 0,
                                                     ),
                                                     IconButton(
                                                       onPressed: () {},

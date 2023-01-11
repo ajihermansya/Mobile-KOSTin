@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:kostin/widget/component_home_one/listview_api.dart';
+import 'package:kostin/app/modules/Listone/views/listone_view.dart';
 import 'package:kostin/widget/home_one.dart';
-import '../controllers/home_inti_controller.dart';
 
 class HomeIntiView extends StatefulWidget {
   const HomeIntiView({super.key});
@@ -17,7 +15,7 @@ class _HomeIntiViewState extends State<HomeIntiView> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     HomeOne(),
-    listView(),
+    ListoneView(),
     Text(
       'Index 2: School',
       style: optionStyle,

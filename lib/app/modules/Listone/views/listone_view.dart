@@ -1,24 +1,23 @@
-import 'dart:convert';
+//ListoneView
 
+import 'dart:convert';
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
-import 'package:kostin/models/models_card/cart_model.dart';
 import 'package:kostin/models/models_home/menu_model.dart';
 import 'package:kostin/provider/cart_provider.dart';
+
 import 'package:open_whatsapp/open_whatsapp.dart';
 import 'package:provider/provider.dart';
 
-class listView extends StatefulWidget {
-  const listView({super.key});
+class ListoneView extends StatefulWidget {
+  const ListoneView({super.key});
   @override
-  State<listView> createState() => _listViewState();
+  State<ListoneView> createState() => _ListoneViewState();
 }
 
-class _listViewState extends State<listView> {
+class _ListoneViewState extends State<ListoneView> {
   final String urlMenu =
       "https://script.google.com/macros/s/AKfycbyxFRDYsmVNz2PR2Ejpk4Iq7DDxkQMUyCPkiTH_utO3PLmnpTjp_iHxiGoO8X9COYuW/exec";
 
@@ -159,7 +158,7 @@ class _listViewState extends State<listView> {
                                               Text(
                                                 "Rp. " + menu.price.toString(),
                                                 style: GoogleFonts.montserrat(
-                                                  fontSize: 15,
+                                                  fontSize: 14,
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
@@ -179,7 +178,7 @@ class _listViewState extends State<listView> {
                                                     ),
                                                   ),
                                                   SizedBox(
-                                                    width: 3,
+                                                    width: 0,
                                                   ),
                                                   Consumer<CartProvider>(
                                                     builder:
@@ -203,13 +202,13 @@ class _listViewState extends State<listView> {
                                                             TextAlign.left,
                                                         style: GoogleFonts
                                                             .montserrat(
-                                                          fontSize: 14,
+                                                          fontSize: 11,
                                                         ),
                                                       );
                                                     },
                                                   ),
                                                   SizedBox(
-                                                    width: 3,
+                                                    width: 0,
                                                   ),
                                                   IconButton(
                                                     onPressed: () {
@@ -711,9 +710,9 @@ class _listViewState extends State<listView> {
                             "\n" +
                             strPesanan;
 
-                        // FlutterOpenWhatsapp.sendSingleMessage(
-                        //     "6283847978702", pesanan);
-                        print(pesanan);
+                        FlutterOpenWhatsapp.sendSingleMessage(
+                            "6283847978702", pesanan);
+                        // print(pesanan);
                       },
                       child: Container(
                         alignment: Alignment.center,

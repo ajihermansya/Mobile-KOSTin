@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import 'package:kostin/app/modules/IntroductionScreen/bindings/introduction_screen_binding.dart';
 import 'package:kostin/app/modules/IntroductionScreen/views/introduction_screen_view.dart';
+import 'package:kostin/app/modules/Listone/bindings/listone_binding.dart';
+import 'package:kostin/app/modules/Listone/views/listone_view.dart';
 import 'package:kostin/app/modules/NavigationBarr/bindings/navigation_barr_binding.dart';
 import 'package:kostin/app/modules/NavigationBarr/views/navigation_barr_view.dart';
 import 'package:kostin/app/modules/SignUpScreen/bindings/sign_up_screen_binding.dart';
@@ -10,6 +12,8 @@ import 'package:kostin/app/modules/home/bindings/home_binding.dart';
 import 'package:kostin/app/modules/home/views/home_view.dart';
 import 'package:kostin/app/modules/home_inti/bindings/home_inti_binding.dart';
 import 'package:kostin/app/modules/home_inti/views/home_inti_view.dart';
+import 'package:kostin/app/modules/identitas/bindings/identitas_binding.dart';
+import 'package:kostin/app/modules/identitas/views/identitas_view.dart';
 import 'package:kostin/app/modules/loginpage/bindings/loginpage_binding.dart';
 import 'package:kostin/app/modules/loginpage/views/loginpage_view.dart';
 
@@ -50,6 +54,16 @@ class AppPages {
       name: _Paths.NAVIGATION_BARR,
       page: () => NavigationBarrView(),
       binding: NavigationBarrBinding(),
+    ),
+    GetPage(
+      name: _Paths.IDENTITAS,
+      page: () => IdentitasView(),
+      binding: IdentitasBinding(),
+    ),
+    GetPage(
+      name: _Paths.LISTONE,
+      page: () => ListoneView(),
+      binding: ListoneBinding(),
     ),
   ];
 }

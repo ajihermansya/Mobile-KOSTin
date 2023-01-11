@@ -11,6 +11,8 @@ abstract class Routes {
   static const HOME_FIX = _Paths.HOME_FIX;
   static const HOME_INTI = _Paths.HOME_INTI;
   static const NAVIGATION_BARR = _Paths.NAVIGATION_BARR;
+  static const IDENTITAS = _Paths.IDENTITAS;
+  static const LISTONE = _Paths.LISTONE;
 }
 
 abstract class _Paths {
@@ -21,4 +23,6 @@ abstract class _Paths {
   static const HOME_FIX = '/home-fix';
   static const HOME_INTI = '/home-inti';
   static const NAVIGATION_BARR = '/navigation-barr';
+  static const IDENTITAS = '/identitas';
+  static const LISTONE = '/listone';
 }
